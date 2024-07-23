@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E6E6FA;  /* Light Lavender */
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Ensure header is above other content */
+}
+
+header .logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+header .site-title {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+header .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+header .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+header nav {
+    transition: max-height 0.3s ease; /* Smooth transition for the nav */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Service Page Styles */
+.services-page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.college {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 1rem auto;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.college img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.college h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.college-notices {
+    background-color: #E6E6FA;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Amethyst */
+}
+
+.college-notices h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.college-notices ul {
+    list-style-type: none;
+    padding: 0;
+    color: #333;
+}
+
+.college-notices ul li {
+    margin-bottom: 0.5rem;
+}
+
+.college-notices ul li:hover {
+    text-decoration: underline;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .menu-toggle {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 3rem; /* Adjust to fit the height of the header */
+    }
+
+    header nav.active {
+        display: flex;
+        max-height: 500px; /* Adjust to your menu height */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    header .site-title {
+        display: none; /* Hide the title on mobile */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.college {
+    animation: fadeIn 1s ease;
+}
