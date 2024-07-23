@@ -1,0 +1,1 @@
+The "Summer Internships for All" website is a centralized platform helping Indian students find summer internships and research opportunities at top institutions, offering timely updates and direct links to college websites for an efficient search process.
